@@ -69,9 +69,8 @@
         <nav id="navbar-main" aria-label="Primary navigation"
             class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary bg- #CEDD43">
             <div class="container position-relative">
-                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
-                    <img class="navbar-brand-dark" src="./assets/img/brand/dark.svg" alt="Logo light">
-                    <img class="navbar-brand-light" src="./assets/img/brand/dark.svg" alt="Logo dark">
+                <a class=" navbar-brand" href="./index.html">
+                    <span>Piazza</span>
                 </a>
                 <div class="navbar-collapse collapse" id="navbar_global">
                     <div class="navbar-collapse-header">
@@ -90,7 +89,6 @@
                         </div>
                     </div>
                     <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">
                                 <span class="nav-link-inner-text">Chats</span>
@@ -134,10 +132,12 @@
                                         </a>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </li>
-                        <div><a>Polls</a></div>
+                        <!-- <div class="nav-item"><a><span class="text-dark d-block">Polls</span></a></div> -->
+                        <div class="nav-item"><a href="./html/pages/create_post.html"><span
+                                    class="text-dark d-block">Post</a></div>
                     </ul>
                     <div class="form-group col-sm-6 col-md-7 col-lg-8">
                         <div class="input-group">
@@ -146,127 +146,163 @@
                             </div>
                             <input class="form-control" id="exampleInputIcon1" placeholder="Search" type="text"
                                 aria-label="Input with icon left">
-
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class = "nav-item">
                     <span class="fas fa-user fa-lg fa-2x"></span>
-                    <button type="button" class="btn btn-primary">
-                        Notifications <span class="badge badge-pill badge-success">3</span>
+                    <button type="button" class="btn nav-item ml-3">
+                        <span class = "fas fa-bell"></span> <span class="badge badge-pill badge-success">3</span>
                         <span class="sr-only">unread messages</span>
                     </button>
                 </div>
 
     </header>
     <!-- Hero -->
-    <section class="section section bg-soft pb-5 overflow-hidden z-2">
+    <section class="section section bg-soft pb-5 z-2">
         <div class="container z-2">
             <div class="row justify-content-left text-left pt-6">
                 <div class="col-lg-8 col-xl-8">
                     <h1 class="display-2 mb-3">Posts</h1>
-                </div>
-                <div>
-                    <div class="nav-item dropdown justify-content-left">
-                        <a href="#" class="nav-link" data-toggle="dropdown">
+                    <div class="nav-item navbar-nav-hover dropdown">
+                        <a href="#" data-toggle="dropdown">
+                            <span class="fas fa-filter"></span>
                             <span class="nav-link-inner-text">Filters</span>
                             <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./html/pages/about.html">General</a></li>
-                            <li><a class="dropdown-item" href="./html/pages/pricing.html">Homework</a></li>
-                            <li><a class="dropdown-item" href="./html/pages/contact.html">Chat2</a></li>
-                            <li><a class="dropdown-item" href="./html/pages/sign-in.html">Chat3</a></li>
-                            <li><a class="dropdown-item" href="./html/pages/sign-up.html">Chat4</a></li>
+                            <div class="form-check dropdown-item">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Important
+                                </label>
+                            </div>
+                            <div class="form-check dropdown-item">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Read
+                                </label>
+                            </div>
+                            <div class="form-check dropdown-item">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                    value="option3">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Unread
+                                </label>
+                            </div>
+                            <div class="form-check dropdown-item">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4"
+                                    value="option4">
+                                <label class="form-check-label" for="exampleRadios4">
+                                    Recent
+                                </label>
+                            </div>
+                            <div class="form-check dropdown-item">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                                    value="option5">
+                                <label class="form-check-label" for="exampleRadios5">
+                                    Highest Voted
+                                </label>
+                            </div>
+                            <div class="form-check dropdown-item">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6"
+                                    value="option6">
+                                <label class="form-check-label" for="exampleRadios6">
+                                    Lowest Voted
+                                </label>
+                            </div>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="section bg-primary pt-0 section-lg">
-        <div class="section section-lg pt-0">
-            <div class="container">
-                <div class="col-13">
-                    <div class="card bg-primary shadow-soft border-light px-4 py-5 text-center mb-5">
-                        <div>
-                            <div class="fas fa-user fa-lg fa-4x color-blue" style="float:left;">
-                            </div>
-                            <div class="card-header pb-2 px-lg-2 pt-2 text-left" style="float:left;">
-                                <h2 class="h2 mb-2 px-lg-4">User 483A</h2>
-                                <p class="mb-3 lead px-lg-4" style="font-size:1em">
-                                    Friday, Oct.28 12:44 PM
-                                </p>
-                            </div>
+    <section>
+        <div class="section bg-primary pt-0 section-lg">
+            <div class="section section-lg pt-0">
+                <div class="container">
+                    <div class="col-13">
+                        <div class="card bg-primary shadow-soft border-light px-4 py-5 text-center mb-5">
                             <div>
-                                <button class="btn btn-icon-only btn-primary" type="button" aria-label="love button"
-                                    title="love button" style="float: right; height: 50px; width: 50px">
-                                    <span aria-hidden="true" class="far fa-star fa-2x"></span>
+                                <div class="fas fa-user fa-lg fa-4x color-blue" style="float:left;">
+                                </div>
+                                <div class="card-header pb-2 px-lg-2 pt-2 text-left" style="float:left;">
+                                    <h2 class="h2 mb-2 px-lg-4">User 483A</h2>
+                                    <p class="mb-3 lead px-lg-4" style="font-size:1em">
+                                        Friday, Oct.28 12:44 PM
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-icon-only btn-primary" type="button" aria-label="love button"
+                                        title="love button" style="float: right; height: 50px; width: 50px">
+                                        <span aria-hidden="true" class="far fa-star fa-2x"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body pt-2 px-0 px-lg-2 text-left">
+                                <p class="mb-5 lead">
+                                    I am stuck on project 4. I am not sure what to do and I need help starting.
+                                </p>
+                                <button class="btn btn-sm btn-primary animate-hover mr-2">
+                                    <span class="fas fa-arrow-up mr-2 animate-up-2"></span>
+                                    4
                                 </button>
+                                <button class="btn btn-sm btn-primary text-danger animate-hover">
+                                    <span class="fas fa-arrow-down mr-2 animate-down-2"></span>
+                                    1
+                                </button>
+                                <div>
+                                    <a>
+                                        <p class="mb-1 lead" style="float: right;"> View 4 Replies</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-body pt-2 px-0 px-lg-2 text-left">
-                            <p class="mb-5 lead">
-                                I need help starting project 4 I dont know where to start and the instructions aren't very clear
-                            </p>
-                            <button class="btn btn-sm btn-primary animate-hover mr-2">
-                                <span class="fas fa-arrow-up mr-2 animate-up-2"></span>
-                                4
-                            </button>
-                            <button class="btn btn-sm btn-primary text-danger animate-hover">
-                                <span class="fas fa-arrow-down mr-2 animate-down-2"></span>
-                                1
-                            </button>
-                        </div>
-                        <div>
-                            <a>
-                                <p class="mb-1 lead" style="float: right;"> View 4 Replies</p>
-                            </a>
-                        </div>
-                    </div>
 
-                </div>
-                <div class="col-11">
-                    <div class="card bg-primary shadow-soft border-light px-4 py-5 text-center mb-5">
-                        <div>
-                            <div class="fas fa-user fa-lg fa-4x color-blue" style="float:left;">
-                            </div>
-                            <div class="card-header pb-2 px-lg-2 pt-2 text-left" style="float:left;">
-                                <h2 class="h2 mb-2 px-lg-4">User 283A</h2>
-                                <p class="mb-3 lead px-lg-4" style="font-size:1em">
-                                    Friday, Oct.28 12:44 PM
-                                </p>
-                            </div>
+                    </div>
+                    <div class="col-13">
+                        <div class="card bg-primary shadow-soft border-light px-4 py-5 text-center mb-5">
                             <div>
-                                <button class="btn btn-icon-only btn-primary" type="button" aria-label="love button"
-                                    title="love button" style="float: right; height: 50px; width: 50px">
-                                    <span aria-hidden="true" class="far fa-star fa-2x"></span>
+                                <div class="fas fa-user fa-lg fa-4x color-blue" style="float:left;">
+                                </div>
+                                <div class="card-header pb-2 px-lg-2 pt-2 text-left" style="float:left;">
+                                    <h2 class="h2 mb-2 px-lg-4">User 283A</h2>
+                                    <p class="mb-3 lead px-lg-4" style="font-size:1em">
+                                        Friday, Oct.28 12:44 PM
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-icon-only btn-primary" type="button" aria-label="love button"
+                                        title="love button" style="float: right; height: 50px; width: 50px">
+                                        <span aria-hidden="true" class="far fa-star fa-2x"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body pt-2 px-0 px-lg-2 text-left">
+                                <p class="mb-5 lead">
+                                    I am assigning project 2 right now. It is due in several weeks, so make sure you
+                                    start early.
+                                </p>
+                                <button class="btn btn-sm btn-primary animate-hover mr-2">
+                                    <span class="fas fa-arrow-up mr-2 animate-up-2"></span>
+                                    4
+                                </button>
+                                <button class="btn btn-sm btn-primary text-danger animate-hover">
+                                    <span class="fas fa-arrow-down mr-2 animate-down-2"></span>
+                                    1
                                 </button>
                             </div>
-                        </div>
-                        <div class="card-body pt-2 px-0 px-lg-2 text-left">
-                            <p class="mb-5 lead">
-                                I am assigning project 3 tonight. It is due in 2 weeks.
-                            </p>
-                            <button class="btn btn-sm btn-primary animate-hover mr-2">
-                                <span class="fas fa-arrow-up mr-2 animate-up-2"></span>
-                                4
-                            </button>
-                            <button class="btn btn-sm btn-primary text-danger animate-hover">
-                                <span class="fas fa-arrow-down mr-2 animate-down-2"></span>
-                                1
-                            </button>
-                        </div>
-                        <div>
-                            <a>
-                            <p class="mb-1 lead" style="float: right;"> View 6 Replies</p>
-                            </a>    
+                            <div>
+                                <p class="mb-1 lead" style="float: right;"> View 9 Replies</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Core -->
     <script src="./vendor/jquery/dist/jquery.min.js"></script>
     <script src="./vendor/popper.js/dist/umd/popper.min.js"></script>
